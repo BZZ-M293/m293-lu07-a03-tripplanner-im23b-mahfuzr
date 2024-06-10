@@ -8,6 +8,89 @@
 <body>
 
 <h1>Reisebuchungs-Formular</h1>
+<form action="https://it.bzz.ch/demo/formdata/index.php" method="get">
+  <fieldset>
+    <legend>Nachbarlandern</legend>
+    <select id="Nachbarlander" name="Nachbarlander" size="6">
+      <optgroup label="Lander"></optgroup>
+      <option value="Frankreich">Frankreich</option>
+      <option value="Deutschland">Deutschland</option>
+      <option value="Italien">Italien</option>
+      <option value="Liechtenstein">Liechtenstein</option>
+      <option value="Osterreich">Osterreich</option>
+    </select>
+  </fieldset>
+  <fieldset>
+    <legend>Unterkunft</legend>
+    <input type="radio" id="Hostel" name="Unterkunft" value="Hostel">
+    <label for="Hostel"> Hostel</label>
+    <input type="radio" id="Hotel" name="Unterkunft" value="Hotel">
+    <label for="Hotel"> Hotel</label>
+    <input type="radio" id="Ferienwohnung" name="Unterkunft" value="Ferienwohnung">
+    <label for="Ferienwohnung"> Ferienwohnung</label>
+  </fieldset>
+  <fieldset>
+    <legend>Dienstleistungen</legend>
+    <input type="checkbox" id="Reiseversicherung" name="Unterkunft" value="Reiseversicherung" checked>
+    <label for="Reiseversicherung">Reiseversicherung</label>
+    <input type="checkbox" id="Flughafentransfer" name="Unterkunft" value="Flughafentransfer">
+    <label for="Flughafentransfer">Flughafentransfer</label>
+    <input type="checkbox" id="Zusatzliches Gepack" name="Unterkunft" value="Zusatzliches Gepack">
+    <label for="Zusatzliches Gepack">Zusatzliches Gepack</label>
+  </fieldset>
+  <fieldset>
+    <legend>Reisedauer</legend>
+    <label for="Startpunkt">Hinreise:
+      <input name="Startpunkt" id="Startpunkt" type="date">
+    </label>
+    <label for="Endpunkt">Rückreise:
+      <input name="Endpunkt" id="Endpunkt" type="date">
+    </label>
+  </fieldset>
+  <fieldset>
+    <legend>Reisedauer:</legend>
+    <label for="startdatum">Reisebeginn:</label><br>
+    <input id="startdatum" name="startdatum" required="" type="date"><br>
+    <label for="enddatum">Reiseende:</label><br>
+    <input id="enddatum" name="enddatum" required="" type="date"><br>
+    <label for="reisedauer">Reisedauer (in Tagen):</label><br>
+    <input id="reisedauer" max="21" min="1" name="reisedauer" required="" type="number"><br>
+  </fieldset>
+  <br>
+  <fieldset>
+    <legend>Anzahl der reisenden Personen:</legend>
+    <label for="personen"></label>
+    <input id="personen" name="personen" required="" type="number"><br>
+  </fieldset>
+  <br>
+  <fieldset>
+    <legend>Reiseziel</legend>
+    <label for="reiseziel"></label>
+    <input id="reiseziel" list="ziele" name="reiseziel">
+    <datalist id="ziele">
+      <option value="London">
+      </option>
+      <option value="Paris">
+      </option>
+      <option value="Rom">
+      </option>
+      <option value="Berlin">
+      </option>
+      <option value="Wien">
+      </option>
+    </datalist>
+  </fieldset>
+  <br>
+  <fieldset>
+    <legend>Kontakt</legend>
+    <label for="email">Ihre E-Mail-Adresse:</label><br>
+    <input id="email" name="email" required="" type="email">
+  </fieldset>
+  <br>
+  <input type="reset" value="Eingaben zurücksetzen">
+  <input type="submit" value="Buchung abschicken"><br>
+
+</form>
 
 
 </body>
